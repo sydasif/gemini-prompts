@@ -1,3 +1,6 @@
+name = "debugging:performance-profile"
+description = "Perform comprehensive performance profiling to identify bottlenecks and optimize application performance"
+
 prompt = """
 # Performance Profiling & Optimization
 

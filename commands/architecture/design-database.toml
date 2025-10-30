@@ -1,3 +1,6 @@
+name = "architecture:design-database"
+description = "Design a comprehensive database schema following normalization principles, indexing strategies, and performance considerations"
+
 prompt = """
 # Design Database Schema
 

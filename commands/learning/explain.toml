@@ -1,3 +1,6 @@
+name = "learning:explain"
+description = "Explain technical concepts in a comprehensive, multi-level approach from simple analogies to detailed technical implementation"
+
 prompt = """
 # Explain Technical Concept
 

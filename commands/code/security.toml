@@ -1,3 +1,6 @@
+name = "code:security"
+description = "Perform a comprehensive security analysis to identify vulnerabilities and recommend secure coding practices"
+
 prompt = """
 # Security Code Review
 

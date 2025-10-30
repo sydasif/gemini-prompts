@@ -1,3 +1,6 @@
+name = "code:best-practices"
+description = "Perform a comprehensive code review focusing on best practices, readability, maintainability, and adherence to SOLID principles"
+
 prompt = """
 # Best Practices Code Review
 

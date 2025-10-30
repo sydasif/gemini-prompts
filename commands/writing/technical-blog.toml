@@ -1,3 +1,6 @@
+name = "writing:technical-blog"
+description = "Write a comprehensive technical blog post with proper structure, code examples, and SEO optimization"
+
 prompt = """
 # Write Technical Blog Post
 

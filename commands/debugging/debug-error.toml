@@ -1,3 +1,6 @@
+name = "debugging:debug-error"
+description = "Analyze error messages and diagnose the root cause of issues with step-by-step troubleshooting guidance"
+
 prompt = """
 # Debug Error
 

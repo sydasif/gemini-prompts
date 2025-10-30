@@ -1,3 +1,6 @@
+name = "code:refactor"
+description = "Provide refactoring recommendations to improve code quality, eliminate code smells, and apply appropriate design patterns"
+
 prompt = """
 # Code Refactoring Suggestions
 

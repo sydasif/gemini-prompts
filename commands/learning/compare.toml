@@ -1,3 +1,6 @@
+name = "learning:compare"
+description = "Provide a comprehensive comparison of technologies, frameworks, or approaches with detailed analysis and recommendations"
+
 prompt = """
 # Compare Technologies
 

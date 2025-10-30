@@ -1,3 +1,6 @@
+name = "prompts:improve"
+description = "Analyze and improve prompts by enhancing clarity, structure, context, and output specifications"
+
 prompt = """
 # Improve This Prompt
 

@@ -1,3 +1,6 @@
+name = "debugging:trace-issue"
+description = "Perform root cause analysis to trace issues from symptoms to underlying causes using systematic investigation techniques"
+
 prompt = """
 # Root Cause Analysis - Trace Issue
 

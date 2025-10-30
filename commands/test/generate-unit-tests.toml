@@ -1,3 +1,6 @@
+name = "test:generate-unit-tests"
+description = "Generate comprehensive unit tests covering happy paths, edge cases, error conditions, and boundary conditions"
+
 prompt = """
 # Generate Unit Tests
 

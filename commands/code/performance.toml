@@ -1,3 +1,6 @@
+name = "code:performance"
+description = "Analyze code for performance bottlenecks including algorithmic complexity, memory management, and I/O optimization"
+
 prompt = """
 # Performance Code Review
 

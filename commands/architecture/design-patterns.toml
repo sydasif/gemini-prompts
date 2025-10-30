@@ -1,3 +1,6 @@
+name = "architecture:design-patterns"
+description = "Analyze code for common design patterns and recommend appropriate patterns for different scenarios"
+
 prompt = """
 # Suggest Design Patterns
 
