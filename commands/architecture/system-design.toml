@@ -23,6 +23,14 @@ Please design a comprehensive system architecture for the following requirements
 - **Security**: Authentication, encryption, compliance
 - **Maintainability**: Code quality, deployment ease
 
+#### Network Automation Considerations
+- **Source of Truth (SoT)**: How is network state managed? (e.g., NetBox, Nautobot, Git)
+- **Configuration Templating**: What engine is used? (e.g., Jinja2, TTP)
+- **Device Interaction**: How to connect to devices? (e.g., SSH, NETCONF, RESTCONF, gNMI)
+- **Inventory Management**: How are devices discovered and managed?
+- **Job Queuing/Scheduling**: How are long-running tasks handled? (e.g., Celery, RQ)
+- **Telemetry & Monitoring**: How is network telemetry collected and processed?
+
 #### Constraints
 - Budget limitations
 - Technology restrictions
@@ -64,7 +72,7 @@ Session storage: 100MB per 10K concurrent users
 
 ### 3. High-Level Architecture
 
-#### Architecture Diagram (Text Format)
+#### Architecture Diagram (Web Application)
 ```
                     ┌──────────────┐
                     │    Client    │
@@ -101,6 +109,46 @@ Session storage: 100MB per 10K concurrent users
       │  Primary  │  │  Read     │  │  Object   │
       │  Database │  │  Replica  │  │  Storage  │
       └───────────┘  └───────────┘  └───────────┘
+```
+
+#### Architecture Diagram (Network Automation)
+```
+                    ┌──────────────┐
+                    │  User/Admin  │
+                    │ (CLI, Web UI)│
+                    └──────┬───────┘
+                           │
+                    ┌──────▼───────┐
+                    │ API Gateway  │
+                    └──────┬───────┘
+                           │
+            ┌──────────────┼──────────────┐
+            │              │              │
+      ┌─────▼─────┐  ┌─────▼─────┐  ┌─────▼─────┐
+      │ Automation│  │ Source of │  │ Secrets   │
+      │  Engine   │  │   Truth   │  │  Store    │
+      │ (Ansible) │  │  (NetBox) │  │  (Vault)  │
+      └─────┬─────┘  └─────┬─────┘  └───────────┘
+            │              │
+            │       ┌──────▼───────┐
+            └──────►│ Message      │
+                    │   Queue      │
+                    │  (Celery)    │
+                    └──────┬───────┘
+                           │
+            ┌──────────────┴──────────────┐
+            │                             │
+      ┌─────▼─────┐                 ┌─────▼─────┐
+      │  Worker   │                 │  Worker   │
+      │  Node 1   │                 │  Node 2   │
+      └─────┬─────┘                 └─────┬─────┘
+            │                             │
+            └─────────────┬───────────────┘
+                          │
+                    ┌─────▼─────┐
+                    │ Network   │
+                    │  Devices  │
+                    └───────────┘
 ```
 
 ### 4. Component Design
@@ -141,11 +189,12 @@ Session storage: 100MB per 10K concurrent users
 - **Connection pooling**: Reuse connections
 
 #### Message Queue
-- **Technology**: RabbitMQ, Kafka, AWS SQS
+- **Technology**: RabbitMQ, Kafka, AWS SQS, Celery, RQ
 - **Use cases**:
-  - Async processing
-  - Event-driven architecture
-  - Decoupling services
+  - Async processing (e.g., running compliance reports)
+  - Event-driven architecture (e.g., reacting to network events)
+  - Decoupling services (e.g., web frontend from automation backend)
+  - Scheduling network tasks
 - **Patterns**:
   - Producer-Consumer
   - Pub-Sub
@@ -182,6 +231,21 @@ Session storage: 100MB per 10K concurrent users
 6. Web Server → Publish event to queue
 7. Background worker → Process event
 8. Return response to client
+```
+
+#### Network Automation Flow (VLAN Provisioning)
+```
+1. User → Web UI/CLI → Request new VLAN
+2. API Gateway → Authenticate & Authorize
+3. Automation Engine → Validate request against Source of Truth
+4. Automation Engine → Enqueue job in Message Queue
+5. Worker Node → Dequeue job
+6. Worker Node → Fetch device credentials from Secrets Store
+7. Worker Node → Generate configuration from templates
+8. Worker Node → Connect to Network Devices (SSH/NETCONF)
+9. Worker Node → Apply configuration
+10. Worker Node → Update job status
+11. Automation Engine → Update Source of Truth with new state
 ```
 
 ### 6. Scalability Strategies

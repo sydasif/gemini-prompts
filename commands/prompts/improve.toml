@@ -7,9 +7,9 @@ Analyze and improve the following prompt:
 {{args}}
 ```
 
-## Evaluation Criteria:
 
-### 1. Clarity & Specificity
+
+
 **Current State:**
 - Is the prompt clear and unambiguous?
 - Are the instructions specific enough?
@@ -20,7 +20,7 @@ Analyze and improve the following prompt:
 - Add specific requirements
 - Remove ambiguity
 
-### 2. Structure & Organization
+
 **Current State:**
 - Is the prompt well-organized?
 - Does it use headers, lists, or sections?
@@ -31,7 +31,7 @@ Analyze and improve the following prompt:
 - Use numbered steps for processes
 - Group related information
 
-### 3. Context & Constraints
+
 **Current State:**
 - Does it provide enough context?
 - Are constraints clearly defined?
@@ -42,10 +42,14 @@ Analyze and improve the following prompt:
 - Specify limitations and boundaries
 - State assumptions explicitly
 
-### 4. Output Specification
+
 **Current State:**
 - Is the desired output format specified?
 - Are examples provided?
 - Is the level of detail clear?
 
-**
+**### 1. Clarity & Specificity
+### 2. Structure & Organization## Evaluation Criteria:
+### 3. Context & Constraints
+### 4. Output Specification
+"""
