@@ -16,17 +16,11 @@ A curated library of high-quality, professionally crafted prompts for common dev
 
 ## 📦 Installation
 
-Install the extension using the Gemini CLI:
+Install from a local directory:
 
 ```bash
-gemini extensions install yourusername/prompt-library-extension
-```
-
-Or install from a local directory:
-
-```bash
-git clone https://github.com/yourusername/prompt-library-extension.git
-cd prompt-library-extension
+git clone https://github.com/yourusername/gemini-prompts.git
+cd gemini-prompts
 gemini extensions link .
 ```
 
@@ -54,33 +48,40 @@ After installation, restart Gemini CLI and start using prompts:
 ## 📋 Available Prompts
 
 ### 🏗️ Architecture & Design
+
 - `/architecture:design-api` - Design RESTful APIs
 - `/architecture:design-database` - Design database schemas
 - `/architecture:system-design` - System architecture
 - `/architecture:design-patterns` - Suggest design patterns
 
 ### 💻 Code
+
 - `/code:best-practices` - Best practices review
 - `/code:performance` - Performance optimization
 - `/code:refactor` - Refactoring suggestions
 - `/code:security` - Deep security analysis
 
 ### 🐛 Debugging
+
 - `/debugging:debug-error` - Diagnose and fix errors
 - `/debugging:performance-profile` - Performance profiling
 - `/debugging:trace-issue` - Root cause analysis
 
 ### 📚 Learning & Explanation
+
 - `/learning:compare` - Compare technologies
 - `/learning:explain` - Explain technical concepts
 
 ### 🎨 Prompt Engineering
+
 - `/prompts:improve` - Improve existing prompts
 
 ### 🧪 Testing
+
 - `/test:generate-unit-tests` - Create unit tests
 
 ### ✍️ Writing & Communication
+
 - `/writing:technical-blog` - Write technical posts
 
 ## 💡 Usage Examples
@@ -129,21 +130,25 @@ function calculateDiscount(price, discountPercent) {
 ## 🎯 Why Use This Extension?
 
 ### Save Time
+
 - Pre-crafted prompts eliminate trial and error
 - Instant access via simple commands
 - Consistent, high-quality results
 
 ### Improve Quality
+
 - Based on prompt engineering best practices
 - Comprehensive, structured outputs
 - Professional-grade results
 
 ### Learn Prompt Engineering
+
 - See examples of effective prompts
 - Understand what makes prompts work
 - Build your own custom prompts
 
 ### Boost Productivity
+
 - Quick access to common tasks
 - Reduce context switching
 - Focus on problem-solving, not prompt crafting
@@ -180,24 +185,30 @@ Fork the repository and edit any `.toml` file to customize prompts to your needs
 Based on the prompts in this library, here are key principles:
 
 ### 1. **Be Specific**
+
 ```
 ❌ "Review this code"
 ✅ "Perform a security analysis focusing on input validation, SQL injection, and XSS vulnerabilities"
 ```
 
 ### 2. **Provide Structure**
+
 Use clear sections, numbering, and formatting to guide the AI's response.
 
 ### 3. **Include Context**
+
 Specify the language, framework, use case, and constraints.
 
 ### 4. **Request Examples**
+
 Ask for code examples, not just explanations.
 
 ### 5. **Define Output Format**
+
 Specify exactly how you want the response structured.
 
 ### 6. **Use Variables**
+
 Make prompts reusable with `{{args}}` placeholders.
 
 ## 🤝 Contributing
@@ -220,6 +231,7 @@ Contributions are welcome! Here's how you can help:
 ## 📖 Documentation
 
 For more information about Gemini CLI extensions:
+
 - [Gemini CLI Documentation](https://geminicli.com/docs/)
 - [Extension Development Guide](https://geminicli.com/docs/extensions/)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
@@ -238,7 +250,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - 🐛 [Report Issues](https://github.com/yourusername/prompt-library-extension/issues)
 - 💬 [Discussions](https://github.com/yourusername/prompt-library-extension/discussions)
-- 📧 Email: your.email@example.com
+- 📧 Email: <your.email@example.com>
 
 ## 🗺️ Roadmap
 
@@ -253,6 +265,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 ## About me
+
 My name is Harish Garg. I am a solo developer. I write at my blog [here](https://harishgarg.com/).
 
 I also maintain a [MCP Resources Directory](https://www.mcpstack.org/) & a [coding ai tools directory](https://www.codeaidirectory.com/)
