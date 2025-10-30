@@ -9,56 +9,38 @@ This extension provides a curated library of high-quality prompts for common dev
 ## Available Prompt Categories
 
 ### 1. Code Review & Analysis
-- **code-review-security**: Deep security analysis of code
-- **code-review-performance**: Performance optimization suggestions
-- **code-review-best-practices**: General best practices review
-- **explain-code**: Detailed code explanation
-- **refactor-suggestions**: Code refactoring recommendations
+- **code:best-practices**: General best practices review
+- **code:performance**: Performance optimization suggestions
+- **code:refactor**: Code refactoring recommendations
+- **code:security**: Deep security analysis of code
 
-### 2. Documentation
-- **write-readme**: Generate comprehensive README files
-- **write-api-docs**: Create API documentation
-- **write-inline-comments**: Add helpful code comments
-- **write-changelog**: Generate changelog from changes
-- **write-contributing**: Create CONTRIBUTING.md guidelines
+### 2. Architecture & Design
+- **architecture:design-api**: Design RESTful APIs
+- **architecture:design-database**: Design database schemas
+- **architecture:design-patterns**: Suggest appropriate design patterns
+- **architecture:system-design**: Design system architecture
 
-### 3. Testing
-- **generate-unit-tests**: Create unit tests for code
-- **generate-e2e-tests**: Create end-to-end tests
-- **test-edge-cases**: Identify and test edge cases
-- **review-test-coverage**: Analyze test coverage gaps
+### 3. Debugging
+- **debugging:debug-error**: Help diagnose and fix errors
+- **debugging:performance-profile**: Performance profiling
+- **debugging:trace-issue**: Trace the root cause of issues
 
-### 4. Debugging
-- **debug-error**: Help diagnose and fix errors
-- **trace-issue**: Trace the root cause of issues
-- **suggest-fixes**: Suggest potential bug fixes
+### 4. Learning & Explanation
+- **learning:compare**: Compare different technologies
+- **learning:explain**: Explain technical concepts clearly
 
-### 5. Architecture & Design
-- **design-api**: Design RESTful APIs
-- **design-database**: Design database schemas
-- **system-architecture**: Design system architecture
-- **design-patterns**: Suggest appropriate design patterns
+### 5. Prompt Engineering
+- **prompts:improve**: Improve existing prompts
 
-### 6. Learning & Explanation
-- **explain-concept**: Explain technical concepts clearly
-- **eli5**: Explain like I'm 5 (simple explanations)
-- **compare-technologies**: Compare different technologies
-- **learning-path**: Create learning roadmaps
+### 6. Testing
+- **test:generate-unit-tests**: Create unit tests for code
 
 ### 7. Writing & Communication
-- **write-technical-blog**: Write technical blog posts
-- **write-email**: Draft professional emails
-- **write-presentation**: Create presentation outlines
-- **simplify-jargon**: Simplify technical jargon
-
-### 8. Prompt Engineering
-- **improve-prompt**: Improve existing prompts
-- **create-prompt-template**: Create reusable prompt templates
-- **prompt-best-practices**: Learn prompt engineering tips
+- **writing:technical-blog**: Write technical blog posts
 
 ## How to Use Prompts
 
-When a user runs a prompt command (e.g., `/prompts:code-review-security`), you should:
+When a user runs a prompt command (e.g., `/code:security`), you should:
 
 1. **Load the appropriate prompt template** from the library
 2. **Substitute any variables** with user-provided context
@@ -102,13 +84,13 @@ Prompts can include variables that get replaced with user input:
 ## Example Usage Patterns
 
 **User asks:** "Review this code for security issues"
-**You do:** Use the `code-review-security` prompt, substitute their code, perform thorough analysis
+**You do:** Use the `code:security` prompt, substitute their code, perform thorough analysis
 
-**User asks:** "Help me write a README"
-**You do:** Use the `write-readme` prompt, gather project info, generate comprehensive README
+**User asks:** "Help me write a technical blog post about using websockets"
+**You do:** Use the `writing:technical-blog` prompt, gather project info, generate a comprehensive blog post
 
 **User asks:** "Explain this complex algorithm"
-**You do:** Use the `explain-code` prompt, break down the algorithm step-by-step
+**You do:** Use the `learning:explain` prompt, break down the algorithm step-by-step
 
 ## Prompt Library Philosophy
 

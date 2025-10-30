@@ -7,7 +7,7 @@ A curated library of high-quality, professionally crafted prompts for common dev
 
 ## ✨ Features
 
-- 🎯 **30+ Professional Prompts** - Carefully crafted for common development tasks
+- 🎯 **16 Professional Prompts** - Carefully crafted for common development tasks
 - 🚀 **Instant Access** - Simple slash commands for quick execution
 - 📖 **Learn by Example** - See prompt engineering best practices in action
 - 🎨 **Organized Categories** - Easy to browse and discover prompts
@@ -36,16 +36,16 @@ After installation, restart Gemini CLI and start using prompts:
 
 ```bash
 # Review code for security issues
-/code-review:security "your code here"
+/code:security "your code here"
 
 # Generate a README file
 /docs:write-readme "describe your project"
 
 # Create unit tests
-/testing:generate-unit-tests "your function here"
+/test:generate-unit-tests "your function here"
 
 # Explain a complex concept
-/learning:explain-concept "recursion"
+/learning:explain "recursion"
 
 # Debug an error
 /debugging:debug-error "paste your error here"
@@ -53,57 +53,42 @@ After installation, restart Gemini CLI and start using prompts:
 
 ## 📋 Available Prompts
 
-### 🔍 Code Review & Analysis
-- `/code-review:security` - Deep security analysis
-- `/code-review:performance` - Performance optimization
-- `/code-review:best-practices` - Best practices review
-- `/code-review:refactor` - Refactoring suggestions
-
-### 📝 Documentation
-- `/docs:write-readme` - Generate comprehensive README
-- `/docs:write-api-docs` - Create API documentation
-- `/docs:write-changelog` - Generate changelog
-- `/docs:write-contributing` - Create contribution guidelines
-
-### 🧪 Testing
-- `/testing:generate-unit-tests` - Create unit tests
-- `/testing:generate-e2e-tests` - Create end-to-end tests
-- `/testing:edge-cases` - Identify edge cases
-- `/testing:coverage-analysis` - Analyze test coverage
-
-### 🐛 Debugging
-- `/debugging:debug-error` - Diagnose and fix errors
-- `/debugging:trace-issue` - Root cause analysis
-- `/debugging:performance-profile` - Performance profiling
-
 ### 🏗️ Architecture & Design
 - `/architecture:design-api` - Design RESTful APIs
 - `/architecture:design-database` - Design database schemas
 - `/architecture:system-design` - System architecture
 - `/architecture:design-patterns` - Suggest design patterns
 
-### 📚 Learning & Explanation
-- `/learning:explain-concept` - Explain technical concepts
-- `/learning:eli5` - Explain like I'm 5
-- `/learning:compare-tech` - Compare technologies
-- `/learning:roadmap` - Create learning paths
+### 💻 Code
+- `/code:best-practices` - Best practices review
+- `/code:performance` - Performance optimization
+- `/code:refactor` - Refactoring suggestions
+- `/code:security` - Deep security analysis
 
-### ✍️ Writing & Communication
-- `/writing:technical-blog` - Write technical posts
-- `/writing:email` - Draft professional emails
-- `/writing:presentation` - Create presentation outlines
+### 🐛 Debugging
+- `/debugging:debug-error` - Diagnose and fix errors
+- `/debugging:performance-profile` - Performance profiling
+- `/debugging:trace-issue` - Root cause analysis
+
+### 📚 Learning & Explanation
+- `/learning:compare` - Compare technologies
+- `/learning:explain` - Explain technical concepts
 
 ### 🎨 Prompt Engineering
 - `/prompts:improve` - Improve existing prompts
-- `/prompts:create-template` - Create prompt templates
-- `/prompts:best-practices` - Learn prompt tips
+
+### 🧪 Testing
+- `/test:generate-unit-tests` - Create unit tests
+
+### ✍️ Writing & Communication
+- `/writing:technical-blog` - Write technical posts
 
 ## 💡 Usage Examples
 
 ### Security Code Review
 
 ```bash
-/code-review:security "
+/code:security "
 function loginUser(username, password) {
   const query = 'SELECT * FROM users WHERE username = ' + username;
   return db.execute(query);
@@ -116,7 +101,7 @@ function loginUser(username, password) {
 ### Generate Unit Tests
 
 ```bash
-/testing:generate-unit-tests "
+/test:generate-unit-tests "
 function calculateDiscount(price, discountPercent) {
   return price - (price * discountPercent / 100);
 }
@@ -128,7 +113,7 @@ function calculateDiscount(price, discountPercent) {
 ### Explain Concept
 
 ```bash
-/learning:explain-concept "closures in JavaScript"
+/learning:explain "closures in JavaScript"
 ```
 
 **Output:** Multi-level explanation from ELI5 to technical details, with examples, use cases, and best practices.
@@ -277,4 +262,3 @@ I also maintain a [MCP Resources Directory](https://www.mcpstack.org/) & a [codi
 **Made with ❤️ for the Gemini CLI community**
 
 Star ⭐ this repo if you find it useful!
-
